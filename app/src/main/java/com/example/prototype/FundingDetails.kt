@@ -15,7 +15,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -31,6 +33,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 import com.example.prototype.ui.theme.BackGround
+import com.example.prototype.ui.theme.Green300
 import com.example.prototype.ui.theme.PrimaryGreen
 
 @Preview(showBackground = true)
@@ -219,7 +222,9 @@ fun Card4() {
             )
             Spacer(modifier = Modifier.height(0.dp))
 
-            Button(onClick = { } , modifier = Modifier.size(220.dp,50.dp)) {
+            Button(onClick = { } , modifier = Modifier.size(220.dp,50.dp),colors = ButtonDefaults.buttonColors(
+                Green300
+            )) {
                 Text(text = "REGISTER")
             }
         }

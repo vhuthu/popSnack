@@ -64,7 +64,7 @@ fun MainFuction() {
 
     items.add(
         OnBoardingData(
-            R.raw.farmer,
+            R.raw.corn ,
             "Let us help you grow your respective businesses",
             " Grow with AgriFund, Get Funding tailored For Your business"
         )
@@ -72,7 +72,7 @@ fun MainFuction() {
 
     items.add(
         OnBoardingData(
-            R.raw.corn,
+            R.raw.reg,
             "Fill out one simple application and track your outcome ",
             "Complete the application and remember to upload the required documents."
         )
