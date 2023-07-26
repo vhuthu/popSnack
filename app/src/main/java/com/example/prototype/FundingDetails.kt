@@ -1,4 +1,5 @@
 package com.example.prototype
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.background
@@ -26,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -221,8 +223,8 @@ fun Card4() {
                 fontWeight = FontWeight.Bold, modifier = Modifier.padding(27.dp)
             )
             Spacer(modifier = Modifier.height(0.dp))
-
-            Button(onClick = { } , modifier = Modifier.size(220.dp,50.dp),colors = ButtonDefaults.buttonColors(
+            val context = LocalContext.current
+            Button(onClick = {context.startActivity(Intent(context,MainActivity5::class.java)) } , modifier = Modifier.size(220.dp,50.dp),colors = ButtonDefaults.buttonColors(
                 Green300
             )) {
                 Text(text = "REGISTER")

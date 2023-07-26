@@ -17,3 +17,5 @@ val PrimaryGreen = Color(0xFF606C38)
 val BackGround = Color(0xFFf5f5f5)
 
 val ButtonGreen = Color(0xFF9DAE62)
+
+val BrownText = Color(0xFF765B5B)

@@ -3,6 +3,7 @@ package com.example.prototype
 import android.content.Intent
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Arrangement.Absolute.Center
 import androidx.compose.foundation.layout.Box
@@ -179,6 +180,7 @@ fun Indicator(isSelected:Boolean) {
 
 @Composable
 fun BottomSection(currentPager: Int) {
+    val context = LocalContext.current
     Row(
         modifier = Modifier
 
@@ -198,11 +200,17 @@ fun BottomSection(currentPager: Int) {
         }else {
             SkipNextButton(
                 text = "Skip",
-                modifier = Modifier.padding(start = 20.dp, end = 20.dp),
+                modifier = Modifier
+                    .padding(start = 20.dp, end = 20.dp)
+                    .clickable { context.startActivity(Intent(context, MainActivity3::class.java)) },
                         color = DarkGreen
             ) //padding for the skip text
+// val context = LocalContext.current
+            OutlinedButton(modifier = Modifier.background( color = Green300, shape = RoundedCornerShape(45.dp)  ),
+                onClick = {  },
 
-            OutlinedButton(modifier = Modifier.background( color = Green300, shape = RoundedCornerShape(45.dp)  ),onClick = { }, shape = RoundedCornerShape(50.dp)  ) {
+                //context.startActivity(Intent(context,MainActivity3::class.java)
+                shape = RoundedCornerShape(50.dp)  ) {
 
                 SkipNextButton(
                     text = "Next",
